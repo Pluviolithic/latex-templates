@@ -1,0 +1,240 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar with edits by Pluviolithic
+% Based off of: https://github.com/harshibar/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\usepackage{biblatex}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+\setlength{\footskip}{4.08pt}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+  }
+
+
+  % custom font: helvetica-style
+  \usepackage{tgheros}
+  \renewcommand*\familydefault{\sfdefault} 
+  %% Only if the base font of the document is to be sans serif
+  \usepackage[T1]{fontenc}
+
+
+  \pagestyle{fancy}
+  \fancyhf{} % clear all header and footer fields
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+
+  % Adjust margins
+  \addtolength{\oddsidemargin}{-0.5in}
+  \addtolength{\evensidemargin}{0in}
+  \addtolength{\textwidth}{1in}
+  \addtolength{\topmargin}{-.5in}
+  \addtolength{\textheight}{1.0in}
+
+  \urlstyle{same}
+
+  \raggedbottom
+  \raggedright
+  \setlength{\tabcolsep}{0in}
+
+  % Sections formatting - serif
+  % \titleformat{\section}{
+  %   \vspace{2pt} \scshape \raggedright\large % header section
+  % }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+  % sans serif sections
+  \titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+    }{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+    % only for pdflatex
+    % Ensure that generated pdf is machine-readable/ATS parsable
+    \pdfgentounicode=1
+
+    %-------------------------
+    % Custom commands
+    \newcommand{\resumeItem}[1]{
+    \item\small{
+        {#1 \vspace{-1pt}}
+      }
+      }
+
+      \newcommand{\resumeSubheading}[4]{
+      \vspace{-1pt}\item
+        \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+          \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+          \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+        \end{tabular*}\vspace{-4pt}
+        }
+
+        \newcommand{\resumeSubSubheading}[2]{
+        \item
+          \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+            \textit{\small#1} & \textit{\small #2} \\
+          \end{tabular*}\vspace{-7pt}
+          }
+
+          \newcommand{\resumeProjectHeading}[2]{
+          \item
+            \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+              #1 & {\color{dark-grey}} \\
+            \end{tabular*}\vspace{-4pt}
+            }
+
+            \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+            \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+            \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+            \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+            \newcommand{\resumeItemListStart}{\begin{itemize}}
+            \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+            \color{text-grey}
+
+            %-------------------------------------------
+            %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+            \begin{document}
+
+            %----------HEADING----------
+            \begin{center}
+              \textbf{\Huge Eric McKanna} \\ \vspace{5pt}
+              \small \faPhone* \texttt{111-111-1111} \hspace{1pt} $|$
+              \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{Email} \hspace{1pt} $|$ 
+              \hspace{1pt} \faGithubSquare \hspace{2pt}\texttt{GitHub} \hspace{1pt} $|$
+              \hspace{1pt} \faLinkedin \hspace{2pt} \texttt{LinkedIn} \hspace{1pt} $|$
+              \hspace{1pt} \faMapMarker* \hspace{2pt} \texttt{Location}
+              \\ \vspace{-3pt}
+            \end{center}
+
+            %-----------EDUCATION-----------
+            \section {EDUCATION}
+            \resumeSubHeadingListStart
+            \resumeSubheading
+            {Ohio Northern University}{August 2021 -- Present}
+            {Bachelor of Science in Computer Science}{Ada, OH}
+            \resumeItemListStart
+            \resumeItem {\textbf{Coursework}: Data Structures and Algorithms, Discrete Math, Foundations of Design}
+            \resumeItemListEnd
+            \resumeSubheading
+            {University of Northwestern, St. Paul}{August 2018 -- May 2020}
+            {Bachelor of Science in Applied Mathematics}{St. Paul, MN}
+            \resumeItemListStart
+            \resumeItem {\textbf{Coursework}: Calculus \RN{3}, Calculus Based Statistics, Linear Algebra, Foundations of Mathematics \RN{2}}
+            \resumeItemListEnd
+            \resumeSubHeadingListEnd
+
+            %-----------RELATED EXPERIENCE-----------
+            \section{RELATED EXPERIENCE}
+            \resumeSubHeadingListStart
+
+            \resumeSubheading
+            {\href{https://www.roblox.com/users/493434533/profile}{\myuline {Cruise Life}} Game Developer}{June 2019 -- Present}
+            {Co-Founder and Head Programmer (\href{https://www.roblox.com/users/493434533/profile}{\myuline {@AetherProgrammer}})}{Remote}
+            \resumeItemListStart
+            \resumeItem{Grew game to a total of more than \textbf{17 million visits} and over \textbf{20 thousand unique daily visitors}}
+            \resumeItem{Managed teams of contractors, developers, and testers consisting of 20+ people to release a quality product}
+            \resumeItem{Built systems in the Lua language to manage player data, user interface interactions, and game scheduling}
+            \resumeItem{Utilized \textbf{Neovim}, \textbf{Git/GitHub}, \textbf{Roblox Studio}, and other tools to create and maintain the codebase}
+            \resumeItemListEnd
+
+            \resumeSubHeadingListEnd
+
+            \section{WORK EXPERIENCE}
+            \resumeSubHeadingListStart
+
+            \resumeSubheading
+            {Frattallone's Ace Hardware}{April 2020 -- June 2020}
+            {Sales Associate}{Arden Hills, MN}
+            \resumeItemListStart
+            \resumeItem{Assisted customers in solving problems, fixing motors, and transporting heavy items}
+            \resumeItem{Cut keys, glass, and wires to desired specifications and helped manage inventory/stock on truck days}
+            \resumeItemListEnd
+
+            \resumeSubheading
+            {University of Northwestern Event Services}{July 2019 -- December 2019}
+            {Parker}{St. Paul, MN}
+            \resumeItemListStart
+            \resumeItem{Directed vehicles toward available parking lots to maximize space usage}
+            \resumeItem{Controlled exiting traffic after events to prevent traffic jams and/or collisions}
+            \resumeItemListEnd
+
+            \resumeSubheading
+            {Hudson Hardware}{August 2017 -- July 2018}
+            {Cashier}{Minneapolis, MN}
+            \resumeItemListStart
+            \resumeItem{Handled customer transactions and ensured customer satisfaction with purchased merchandise}
+            \resumeItem{Cut keys, chain, and other materials to desired lengths when needed and stocked shelves when not busy}
+            \resumeItemListEnd
+
+            \resumeSubHeadingListEnd
+
+            %-----------PROGRAMMING SKILLS-----------
+            \section{SKILLS}
+            \begin{itemize}[leftmargin=0in, label={}]
+              \small{\item{
+                  \textbf{Languages} {: C, C++, Python, Lua, VB.NET}\vspace{2pt} \\
+                  \textbf{Tools}     {: Neovim (primary), Visual Studio (Code), Git/GitHub, Bash/Alacritty, Arch Linux}\vspace{2pt}\\
+                  \textbf{Cultural}  {: Lived seven years in Turkey, traveled to over seven countries, fluent in Turkish, learning Spanish and French} 
+                }}
+            \end{itemize}
+
+            %-----------COMMUNITY INVOLVEMENT-----------
+
+            \section{COMMUNITY INVOLVEMENT}
+            \resumeSubHeadingListStart
+
+            \resumeSubheading
+            {Jericho Road Ministries}{January 2019 -- November 2019}
+            {Food Pantry Volunteer}{Minneapolis, MN}
+            \resumeItemListStart
+            \resumeItem{Unloaded food trucks, sorted food boxes, and assisted in the distribution of resources}
+            \resumeItem{Assisted in production of a summer vacation Bible study to provide value to the children of those in need}
+            \resumeItemListEnd
+            \resumeSubHeadingListEnd
+
+
+            %-------------------------------------------
+          \end{document}
+
