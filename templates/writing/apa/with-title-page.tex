@@ -1,0 +1,50 @@
+\documentclass[man, 12pt]{apa7}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
+
+\AtEveryBibitem{
+    \clearfield{month}
+}
+\DeclareLanguageMapping{american}{american-apa}
+
+\DeclareSourcemap{
+    \maps[datatype=bibtex]{
+        \map{
+            \step[fieldsource=url,
+            notmatch=\regexp{wiki},
+            final=1]
+            \step[fieldset=urldate, null]
+        }
+    }
+}
+
+\title{Lorem Ipsum Dolor Sit Amet}
+\shorttitle{Lorem Ipsum Dolor Sit Amet}
+\author{Author}
+\affiliation{Class Name}
+
+\begin{document}
+% remove this if you want numbers on title page
+\thispagestyle{empty}
+\addtocounter{page}{-1}
+\maketitle
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin massa vitae mollis commodo \parencite{TagA}. Nulla efficitur nulla in tincidunt malesuada. 
+Curabitur et erat vel neque egestas efficitur. Nunc sit amet magna vitae ante luctus aliquet sit amet et quam. Phasellus dictum erat velit, sed sagittis mi lobortis eu. 
+Nullam volutpat orci non ex iaculis luctus. Sed laoreet lorem lectus, eu viverra massa consectetur at. Proin convallis pellentesque fringilla. Maecenas aliquet faucibus odio ac faucibus. 
+Aliquam in magna magna. Aenean ligula neque, lobortis nec sem vel, sodales porttitor massa. Vestibulum vel lorem lorem.
+
+Nam et velit vitae neque rutrum rhoncus quis in odio \parencite{TagC}. Nullam posuere, nisi eu faucibus bibendum, metus lacus luctus ligula, sit amet ultrices ex tellus nec massa. 
+Mauris ultricies risus quis felis cursus luctus. Suspendisse vulputate elementum auctor. Proin eu ornare arcu. Phasellus in fringilla magna. Cras ac sodales odio.
+
+Proin semper lacinia lorem. Suspendisse et gravida sapien. Donec congue placerat turpis, eu molestie lacus vestibulum ac. Pellentesque elit nulla, dapibus eget viverra ut, eleifend vitae erat. 
+Suspendisse cursus lacus ut arcu porttitor, nec gravida lacus accumsan \parencite{TagB}. Donec id nisi fringilla, tincidunt tortor id, fermentum eros. In nec malesuada diam, et ornare erat. 
+Vivamus vitae augue ornare massa ultricies lacinia eu quis est. Etiam quis sollicitudin lorem, sed pharetra metus. Pellentesque finibus sapien in felis lacinia faucibus. 
+Nam commodo sem et mauris viverra, id tristique quam congue. Duis non luctus turpis. Nam at ipsum laoreet, finibus libero eu, porta nunc. Nam dictum diam et pharetra fringilla.
+
+Morbi maximus, est quis cursus faucibus, turpis justo tincidunt orci, a euismod felis sem quis justo. Suspendisse in ligula at erat porttitor faucibus. Cras sed elementum odio. 
+Sed mollis nunc nec vulputate facilisis. Ut ut justo lorem. Vivamus eget ex non ipsum commodo iaculis at pharetra arcu.
+Donec tincidunt, mauris ultrices vulputate facilisis, elit risus commodo nibh, nec gravida urna enim eu leo.
+\printbibliography
+\end{document}
